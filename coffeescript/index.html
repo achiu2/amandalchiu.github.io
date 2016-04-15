@@ -1,29 +1,97 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
-<link rel="stylesheet" type="text/css" href="style.css">
-</head>
+  <head>
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
 
-<body>
-<div class="container">
-  <div class="header">
-    <h1>
-    <img src="logo.png" style="width:100px;vertical-align:bottom">
-    &nbsp;
-    Coffeescript</h1>
-  </div>
-<br>
-<p style="font-size:23px; margin-left:25px; letter-spacing:.5px;">CoffeeScript is a language with simplified syntax (syntactic sugar) that compiles into Javascript</p>
+  <body>
+    <div class="container">
+      <div class="header">
+	<h1>
+	  <img src="logo.png" style="width:100px;vertical-align:bottom">
+	  &nbsp;
+	  Coffeescript</h1>
+      </div>
+      <br>
+      <p style="font-size:23px; margin-left:25px; letter-spacing:.5px;">CoffeeScript is a language with simplified syntax (syntactic sugar) that compiles into Javascript</p>
 
-<h2><a name="background" href="#background">#</a>&nbsp;&nbsp;Background</h2>
-<p></p>
+      <h2><a name="background" href="#background">#</a>&nbsp;&nbsp;Background</h2>
+      <p>
+	<ul>
+	  <li>Jeremy Ashkenas: December 13, 2009: wrote a compiler in Ruby &rarr; Start of CoffeeScript</li>
+	  <li>
+	    <ul>
+	      <li>Elements from Ruby, Python, Haskell</li>
+	      <li>Version 1.0.0 on December 24, 2010</li>
+	    </ul>
+	  </li>
+	  <li>Available as a Node.js utility</li>
+	  <li>Companies like Trello and Dropbox use Coffeescript instead of Javascript</li>
+	</ul>
+      </p>
 
-<h2><a name="cool" href="#cool">#</a>&nbsp;&nbsp;What makes it cool</h2>
-</p></p>
+      <h2><a name="cool" href="#cool">#</a>&nbsp;&nbsp;What makes it cool</h2>
+      <p>
+	<ul>
+	  <li>Syntactically significant whitespace (like Python)</li>
+	  <li>Lightweight syntax (like Ruby)
+	    <ul>
+	      <li>optional parentheses, fewer braces/brackets</li>
+	      <li>splats (* in Ruby)
+		<ul>
+		  <li>[first, rest...] = [1, 2, 3, 4] ; first == 1 ; rest == [2, 3, 4]</li>
+		</ul>
+	      </li>
+	    </ul>
+	  </li>
+	  <li>Class definition
+	    <ul>
+	      <li>unlike JavaScript, where classes are not clearly defined</li>
+	    </ul>
+	  </li>
+	</ul>
+      </p>
 
 <h2><a name="diff" href="#diff">#</a>&nbsp;&nbsp;Difference Between CoffeeScript and JavaScript</h2>
-<p></p>
+      <p>
+
+  <table align="center" style="width:50%">
+    <tr>
+      <td><h3>CoffeeScript</h3></td>
+      <td><h3>JavaScript</h3></td>
+    </tr>
+    
+    <tr>
+      <td><code>#variable declaration<br>hi = 2<br>   opposite = true</code></td>
+      <td><code>//variable declaration<br>var hi = 2;<br>var opposite = true;</code></td>
+    </tr>
+    <tr>
+      <td><code>#conditions<br>h1 = -2 if opposite</code></td>
+      <td><code>//conditions<br>if (opposite){<br>h1 = -1;<br>}</code></td>
+    </tr>
+    <tr>
+      <td><code>#functions<br>square = (x) -> x * x</code></td>
+      <td><code>//functions<br>var square = function(x){<br>return x * x;<br>}</code></td>
+    </tr>
+    <tr>
+      <td><code>#calling a function<br>square 2</code></td>
+      <td><code>//calling a function</br>square(2)</code></td>
+    </tr>
+    <tr>
+      <td><code>#lists<br>listy=[<br>"Geoffrey"<br>"Kaylin"<br>"Alex"<br>"Rebecca"<br>"Linda"<br>]</code></td>
+      <td><code>//lists<br>var list = ["Geoffrey", "Kaylin", "Alex", "Rebecca", "Linda"];</code></td>
+    </tr>
+    <tr>
+      <td><code>#ranges<br>list = [1..5]<br>list2 = [1...5]</code></td>
+      <td><code>//ranges</br>var list = [1, 2, 3, 4, 5];<br>var list2 = [1, 2, 3, 4];</code></td>
+    </tr>
+  </table>
+
+
+
+
+</p>
 
 <h2><a name="install" href="#install">#</a>&nbsp;&nbsp;How to Install</h2>
 <p></p>
