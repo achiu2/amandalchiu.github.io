@@ -1,0 +1,31 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  margin-left: 50px;
+}
+
+h1 {
+  font-size: 50px;
+  letter-spacing: 2px;
+}
+
+h2 {
+    font-size: 20px;
+    letter-spacing: .5px;
+}
+
+h2 a {
+  margin-left: 50px;
+  color: #95a5a6;
+  width: 20px;
+}
+a:not(:hover) {
+  text-decoration: none;
+}
+
+p {
+  margin-left: 100px;
+}
+
+div.header {
+  display: inline-block;
+}
