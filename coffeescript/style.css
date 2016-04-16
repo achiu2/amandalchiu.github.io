@@ -1,6 +1,7 @@
 body {
   font-family: 'Roboto', sans-serif;
-  margin-left: 50px;
+  margin-left: 100px;
+  margin-right: 50px;
 }
 
 h1 {
@@ -9,8 +10,9 @@ h1 {
 }
 
 h2 {
-    font-size: 20px;
-    letter-spacing: .5px;
+  margin-left: 25px;
+  font-size: 20px;
+  letter-spacing: .5px;
 }
 
 h2 a {
@@ -22,10 +24,24 @@ a:not(:hover) {
   text-decoration: none;
 }
 
+.bullet {
+  margin-left: 100px;
+}
+
 p {
   margin-left: 100px;
 }
 
 div.header {
   display: inline-block;
+}
+table{
+  table-layout: fixed;
+}
+td{
+  font-family: Menlo;
+  width:300px;
+  font-size: 13px;
+  padding:10px;
+  vertical-align: top;
 }
