@@ -52,3 +52,25 @@ td{
   padding:10px;
   vertical-align: top;
 }
+code {
+  font-size: 15px;
+  font-style: italic;
+
+}
+.demo {
+  font-family: Menlo;
+  font-size: 13px;
+  margin-left: 75px;
+  border-left: 2px solid #7f8c8d;
+  padding-left: 25px;
+}
+.and {
+  margin-left: 200px;
+}
+.same {
+  font-family: Menlo;
+  font-size: 13px;
+  margin-left: 100px;
+  border-left: 2px solid #2ecc71;
+  padding-left: 15px;
+}
