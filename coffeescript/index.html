@@ -94,15 +94,63 @@
       <td><code>//ranges</br>var list = [1, 2, 3, 4, 5];<br>var list2 = [1, 2, 3, 4];</td></code>
     </tr>
   </table>
-
-
-
-
-</p>
-
 <h2><a name="install" href="#install">#</a>&nbsp;&nbsp;How to Install</h2>
 <p></p>
 
+
+<h2><a name="install" href="#install">#</a>&nbsp;&nbsp;Class Demo</h2>
+<p>As with learning any language, it takes time and patience to learn the syntax/keywords/methods/etc.<br>
+Because we couldn't show <i>all</i> of CoffeeScript, we planned our demo around showing examples of CoffeeScript's verbosity compared to JavaScript.<br><br>Here's a quick runthrough of the demo showed in class:<br><br>
+A simple square-root function would look something like this:
+</p>
+<div class="demo">
+  sqrt = (x) -> x ** (1/2)<br>
+  console.log sqrt(25) #returns 5
+</div>
+<p>Let's write a method called <code>factors</code> that outputs the factors of given integer <code>n</code>.<br>
+  <div class="demo">
+    factors = (n) -><br>
+  </div>
+<p>After making an array <code>num-factors</code> (that we will eventually return with factors of <code>n</code>), we can create a <code>for</code> loop that iterates a variable <code>i</code> from index <code>0</code> to, and including, index <code>n</code>. (This can be denoted as [0..n])<br>
+  If <code>i</code> divides into given parameter <code>n</code> evenly (zero remainder), then <code>push i</code> (i.e. add i) to the end of the array <code>num_factors</code>.<br><br>
+</p>
+  <div class="demo">
+    num_factors = []<br>
+    for i in [0..n]<br>
+      if n % i == 0 then num_factors.push i <br>
+  </div>
+
+<p>The last line <code>num_factors</code> returns the final array with the factors of <code>n</code>. <br>**<u>Note</u>: CoffeeScript adds the return automatically for you. Whatever the last line of your function is that will be the function's return value.</p>
+  <div class="demo">
+  num_factors
+ </div>
+ <p>Our final block of code, with some test cases, will look something like this:</p>
+  <div class="demo">
+  factors = (n) -><br>
+  num_factors = []<br>
+  for i in [0..n]<br>
+  &nbsp;&nbsp;&nbsp;if n % i == 0 then num_factors.push i <br>
+  num_factors<br><br>
+  console.log factors(15)<br>
+  console.log factors(16)<br>
+  console.log factors(17)<br>
+  </div>
+
+  <p>The beauty of CoffeeScript is the flexibility you have in how you write your code.<br>
+  For example:
+    <div class="same">
+    if n % i == 0 then num_factors.push i
+    </div>
+    <p class="and">and</p>
+    <div class="same">
+    num_factors.push i if n % i == 0
+    </div>
+    <p class="and">and</p>
+    <div class="same">
+    if n % i == 0
+    &nbsp;&nbsp;&nbsp;num_factors.push i</p>
+    </div>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;work exactly the same.</p>
 </div>
 </body>
 </html>
