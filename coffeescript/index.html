@@ -10,13 +10,12 @@
   <body>
     <div class="container">
       <div class="header">
+
 	<h1>
 	  <img src="logo.png" style="width:100px;vertical-align:bottom">
 	  &nbsp;
 	  Coffeescript</h1>
       </div>
-      <br>
-
       <div class="nav">
 	<ul>
 	  <li><a href="#background">Background</a></li>
@@ -24,6 +23,8 @@
 	  <li><a href="#diff">Difference between CoffeeScript and JavaScript</a></li>
 	  <li><a href="#install">How to install</a></li>
     <li><a href="#demo">Our Class Demo</a></li>
+    <ul><li><a href="#run">! Running your Code</a></li></ul>
+    <ul><li><a href="#comp">! Transccompiling to JavaScript</a></li></ul>
 	</ul>
       </div>
 
@@ -41,7 +42,7 @@
         	  <li>Companies like Trello and Dropbox use Coffeescript instead of Javascript</li>
         	</ul>
         </div>
-
+<br><hr><br>
       <h2><a name="cool" href="#cool">#</a>&nbsp;&nbsp;What makes it cool</h2>
         <div class="bullet">
           <ul>
@@ -62,7 +63,8 @@
         	  </li>
         	</ul>
         </div>
-      <h2><a name="diff" href="#diff">#</a>&nbsp;&nbsp;Difference Between CoffeeScript and JavaScript</h2>
+<br><hr><br>
+<h2><a name="diff" href="#diff">#</a>&nbsp;&nbsp;Difference Between CoffeeScript and JavaScript</h2>
 
   <table class="table" style="width:50%; margin-left:125px;">
     <tr>
@@ -95,134 +97,142 @@
       <td><code>//ranges</br>var list = [1, 2, 3, 4, 5];<br>var list2 = [1, 2, 3, 4];</td></code>
     </tr>
   </table>
-<h2><a name="install" href="#install">#</a>&nbsp;&nbsp;How to Install</h2>
-<p>OS X</p>
-  <div class="inst">
-    >>&nbsp;&nbsp;brew update<br>
-    >>&nbsp;&nbsp;brew install node<br>
-    >>&nbsp;&nbsp;npm install -g coffee-script<br>
-  </div>
-  <br>
-  <p>Windows<br>
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Install node.js</p>
-  <div class="inst">
-    >>&nbsp;&nbsp;npm install -g coffee-script<br>
-    >>&nbsp;&nbsp;coffee -v<br>
-  </div>
-  <br>
-  <p>Linux</p>
+<br><hr><br>
+  <h2><a name="install" href="#install">#</a>&nbsp;&nbsp;How to Install</h2>
+  <p>OS X</p>
     <div class="inst">
-      >>&nbsp;&nbsp;sudo apt-get install nodejs npm<br>
-      >>&nbsp;&nbsp;sudo npm install coffeescript<br>
+      >>&nbsp;&nbsp;brew update<br>
+      >>&nbsp;&nbsp;brew install node<br>
+      >>&nbsp;&nbsp;npm install -g coffee-script<br>
     </div>
-</p>
-
-
-<h2><a name="demo" href="#demo">#</a>&nbsp;&nbsp;Class Demo</h2>
-<p>Because we couldn't show <i>all</i> of CoffeeScript, we planned our demo around showing examples of CoffeeScript's verbosity compared to JavaScript.<br><br>Here's a quick runthrough of the demo showed in class:<br><br>
-A simple square-root function would look something like this:
-</p>
-<div class="demo">
-  sqrt = (x) -> x ** (1/2)<br>
-  console.log sqrt(25) #returns 5
-</div>
-<p><br><br>Now, let's try to write a method called <code>factors</code> that outputs the factors of given integer <code>n</code>.<br>
+    <br>
+    <p>Windows<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Install node.js</p>
+    <div class="inst">
+      >>&nbsp;&nbsp;npm install -g coffee-script<br>
+      >>&nbsp;&nbsp;coffee -v<br>
+    </div>
+    <br>
+    <p>Linux</p>
+      <div class="inst">
+        >>&nbsp;&nbsp;sudo apt-get install nodejs npm<br>
+        >>&nbsp;&nbsp;sudo npm install coffeescript<br>
+      </div>
+      <br>
+    <hr>
+<br>
+  <h2><a name="demo" href="#demo">#</a>&nbsp;&nbsp;Class Demo</h2>
+  <p>Because we couldn't show <i>all</i> of CoffeeScript, we planned our demo around showing examples of CoffeeScript's verbosity compared to JavaScript.<br><br>Here's a quick runthrough of the demo showed in class:<br><br>
+  A simple square-root function would look something like this:
+  </p>
   <div class="demo">
+    sqrt = (x) -> x ** (1/2)<br>
+    console.log sqrt(25) #returns 5
+  </div>
+  <p><br><br>Now, let's try to write a method called <code>factors</code> that outputs the factors of given integer <code>n</code>.<br>
+    <div class="demo">
+      factors = (n) -><br>
+    </div>
+  <p>After making an array <code>num-factors</code> (that we will eventually return with factors of <code>n</code>), we can create a <code>for</code> loop that iterates a variable <code>i</code> from index <code>0</code> to, and including, index <code>n</code>. (This can be denoted as [0..n])<br>
+    If <code>i</code> divides into given parameter <code>n</code> evenly (zero remainder), then <code>push i</code> (i.e. add i) to the end of the array <code>num_factors</code>.
+  </p>
+    <div class="demo">
+      num_factors = []<br>
+      for i in [0..n]<br>
+      &nbsp;&nbsp;&nbsp;if n % i == 0 then num_factors.push i <br>
+    </div>
+
+  <p>The last line <code>num_factors</code> returns the final array with the factors of <code>n</code>. <br>**<u>Note</u>: CoffeeScript adds the return automatically for you. Whatever the last line of your function is that will be the function's return value.</p>
+    <div class="demo">
+    num_factors
+   </div>
+   <p>Our final block of code, with some test cases, will look something like this:</p>
+    <div class="demo">
     factors = (n) -><br>
-  </div>
-<p>After making an array <code>num-factors</code> (that we will eventually return with factors of <code>n</code>), we can create a <code>for</code> loop that iterates a variable <code>i</code> from index <code>0</code> to, and including, index <code>n</code>. (This can be denoted as [0..n])<br>
-  If <code>i</code> divides into given parameter <code>n</code> evenly (zero remainder), then <code>push i</code> (i.e. add i) to the end of the array <code>num_factors</code>.
-</p>
-  <div class="demo">
-    num_factors = []<br>
-    for i in [0..n]<br>
-    &nbsp;&nbsp;&nbsp;if n % i == 0 then num_factors.push i <br>
-  </div>
-
-<p>The last line <code>num_factors</code> returns the final array with the factors of <code>n</code>. <br>**<u>Note</u>: CoffeeScript adds the return automatically for you. Whatever the last line of your function is that will be the function's return value.</p>
-  <div class="demo">
-  num_factors
- </div>
- <p>Our final block of code, with some test cases, will look something like this:</p>
-  <div class="demo">
-  factors = (n) -><br>
-  &nbsp;&nbsp;&nbsp;num_factors = []<br>
-  &nbsp;&nbsp;&nbsp;for i in [0..n]<br>
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if n % i == 0 then num_factors.push i <br>
-  &nbsp;&nbsp;&nbsp;num_factors<br><br>
-  console.log factors(15)<br>
-  console.log factors(16)<br>
-  console.log factors(17)<br>
-  </div>
-
-  <p>The beauty of CoffeeScript is the flexibility you have in how you write your code.<br>
-  For example:
-    <div class="same">
-    if n % i == 0 then num_factors.push i
+    &nbsp;&nbsp;&nbsp;num_factors = []<br>
+    &nbsp;&nbsp;&nbsp;for i in [0..n]<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if n % i == 0 then num_factors.push i <br>
+    &nbsp;&nbsp;&nbsp;num_factors<br><br>
+    console.log factors(15)<br>
+    console.log factors(16)<br>
+    console.log factors(17)<br>
     </div>
-    <p class="and">and</p>
-    <div class="same">
-    num_factors.push i if n % i == 0
+
+    <p>The beauty of CoffeeScript is the flexibility you have in how you write your code.<br>
+    For example:
+      <div class="same">
+      if n % i == 0 then num_factors.push i
+      </div>
+      <p class="and">and</p>
+      <div class="same">
+      num_factors.push i if n % i == 0
+      </div>
+      <p class="and">and</p>
+      <div class="same">
+      if n % i == 0<br>
+      &nbsp;&nbsp;&nbsp;num_factors.push i</p>
+      </div>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;all work exactly the same.</p>
+      <br><hr><br>
+      <h2><a name="run" href="#run">!</a>&nbsp;&nbsp;Running the Code</h2>
+  <p>Once you have CoffeeScript installed (see above for details), you can save your code as a coffee file with the extension <code>.coffee</code> <br>
+    Run it in the terminal with the command <code>coffee < filename >.coffee</code>.
+  <br><br>
+    When our demo code above is run, it should output:
+    <div class="demo">
+      >>&nbsp;&nbsp;coffee demo.coffee<br>
+      5<br>
+      [ 1, 3, 5 ]<br>
+      [ 1, 2, 4, 8 ]<br>
+      [ 1 ]<br>
     </div>
-    <p class="and">and</p>
-    <div class="same">
-    if n % i == 0<br>
-    &nbsp;&nbsp;&nbsp;num_factors.push i</p>
+  </div>
+  <br>
+<hr>
+<br>
+  <h2><a name="comp" href="#comp">!</a>&nbsp;&nbsp;The Magic: Transcompiling into Javascript</h2>
+    <p>Here lies the most exciting thing about CoffeeScript: <br>
+    After writing your CoffeeScript code and saving it as a <code>.coffee</code> file, you can then <i>transcompile</i> your code into JavaScript. In other words, one command can take the code you wrote in CoffeeScript (saved in your <code>.coffee</code> file), translate it into JavaScript syntax, put in a <code>.js</code> file and save within the same folder as your original <code>.coffee</code> file.
+    <br> Here is the magic command: <code>coffee -o < output_dir > -c < coffee_filename ></code><br>
+    <br>Example:</p>
+    <div class="demo">
+      >>&nbsp;&nbsp;coffee -o . -c demo.coffee<br>
     </div>
-    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;all work exactly the same.<br><br></p>
-<h2>&nbsp;&nbsp;Running the Code</h2>
-<p>Once you have CoffeeScript installed (see above for details), you can save your code as a coffee file with the extension <code>.coffee</code> <br>
-  Run it in the terminal with the command <code>coffee < filename >.coffee</code>.
-<br><br>
-  When our demo code above is run, it should output:
-  <div class="demo">
-    >>&nbsp;&nbsp;coffee demo.coffee<br>
-    5<br>
-    [ 1, 3, 5 ]<br>
-    [ 1, 2, 4, 8 ]<br>
-    [ 1 ]<br>
-  </div>
+    <p>This command will compile the <code>demo.coffee</code> file into a JavaScript file of the same name, <code>demo.js</code>, in the current directory.<br>
+    If you open the demo.js file, it will have the translated code from our demo above. It will look like this:</p>
+    <div class="demo">
+      // Generated by CoffeeScript 1.10.0<br>
+  (function() {<br>
+    &nbsp;&nbsp;&nbsp;var factors, sqrt;<br><br>
 
-  <h2>The Magic: Transcompiling into Javascript</h2>
-  <p>Here lies the most exciting thing about CoffeeScript: <br>
-  After writing your CoffeeScript code and saving it as a <code>.coffee</code> file, you can then <i>transcompile</i> your code into JavaScript. In other words, one command can take the code you wrote in CoffeeScript (saved in your <code>.coffee</code> file), translate it into JavaScript syntax, put in a <code>.js</code> file and save within the same folder as your original <code>.coffee</code> file.
-  <br> Here is the magic command: <code>coffee -o < output_dir > -c < coffee_filename ></code><br>
-  <br>Example:</p>
-  <div class="demo">
-    >>&nbsp;&nbsp;coffee -o . -c demo.coffee<br>
-  </div>
-  <p>This command will compile the <code>demo.coffee</code> file into a JavaScript file of the same name, <code>demo.js</code>, in the current directory.<br>
-  If you open the demo.js file, it will have the translated code from our demo above. It will look like this:</p>
-  <div class="demo">
-    // Generated by CoffeeScript 1.10.0<br>
-(function() {<br>
-  &nbsp;&nbsp;&nbsp;var factors, sqrt;<br><br>
+    &nbsp;&nbsp;&nbsp;sqrt = function(x) {<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  return Math.pow(x, 1 / 2);<br>
+    &nbsp;&nbsp;&nbsp;};<br><br>
 
-  &nbsp;&nbsp;&nbsp;sqrt = function(x) {<br>
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  return Math.pow(x, 1 / 2);<br>
-  &nbsp;&nbsp;&nbsp;};<br><br>
+    &nbsp;&nbsp;&nbsp;console.log(sqrt(25));<br><br>
 
-  &nbsp;&nbsp;&nbsp;console.log(sqrt(25));<br><br>
+    &nbsp;&nbsp;&nbsp;factors = function(n) {<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var i, j, num_factors, ref;<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;num_factors = [];<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for (i = j = 0, ref = n; 0 <= ref ? j < ref : j > ref; i = 0 <= ref ? ++j : --j) {<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (n % i === 0) {<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;num_factors.push(i);<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return num_factors;<br>
+    &nbsp;&nbsp;&nbsp;};<br><br>
 
-  &nbsp;&nbsp;&nbsp;factors = function(n) {<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var i, j, num_factors, ref;<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;num_factors = [];<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for (i = j = 0, ref = n; 0 <= ref ? j < ref : j > ref; i = 0 <= ref ? ++j : --j) {<br>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (n % i === 0) {<br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;num_factors.push(i);<br>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return num_factors;<br>
-  &nbsp;&nbsp;&nbsp;};<br><br>
+    &nbsp;&nbsp;&nbsp;console.log(factors(15));<br><br>
 
-  &nbsp;&nbsp;&nbsp;console.log(factors(15));<br><br>
+    &nbsp;&nbsp;&nbsp;console.log(factors(16));<br><br>
 
-  &nbsp;&nbsp;&nbsp;console.log(factors(16));<br><br>
+    &nbsp;&nbsp;&nbsp;console.log(factors(17));<br><br>
 
-  &nbsp;&nbsp;&nbsp;console.log(factors(17));<br><br>
+  }).call(this);</div>
 
-}).call(this);</div>
-<p>If you run the JavaScript file, it works as intended.</p>
+  <p>If you run the JavaScript file, it works as intended.</p>
+  </div><br>
+  <hr>
     <p style="font-size:23px; margin-left:25px; letter-spacing:.5px;">As with learning any language, it takes time and patience to learn the syntax/keywords/methods/etc.<br>
       We hope you found this tutorial for CoffeeScript helpful. Happy coding!</p>
 </div>
